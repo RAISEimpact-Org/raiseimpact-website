@@ -9,41 +9,48 @@ export default function CategoryChart() {
   const maxVal = 7;
 
   return (
-    <div className="space-y-[var(--space-4)]">
+    <div className="space-y-[var(--space-6)]">
       {categories.map((cat) => (
         <div key={cat.label}>
-          <div className="flex items-baseline justify-between mb-[var(--space-2)]">
-            <span className="text-[15px] text-text">{cat.label}</span>
-            <span className="font-data text-[14px] text-accent font-medium">
+          <div className="flex items-baseline justify-between mb-[var(--space-3)]">
+            <span className="text-[0.875rem] text-text/80">{cat.label}</span>
+            <span className="font-data text-[0.875rem] text-accent font-medium ml-4 shrink-0">
               {cat.change}
             </span>
           </div>
-          <div className="relative h-[8px] rounded-full bg-border overflow-hidden">
+
+          {/* Before bar */}
+          <div className="relative h-[6px] rounded-full bg-border/60 mb-[var(--space-2)]">
             <div
-              className="absolute inset-y-0 left-0 rounded-full bg-primary/40 transition-all"
+              className="absolute inset-y-0 left-0 rounded-full bg-primary/25"
               style={{ width: `${(cat.before / maxVal) * 100}%` }}
             />
+          </div>
+
+          {/* After bar */}
+          <div className="relative h-[6px] rounded-full bg-border/60">
             <div
-              className="absolute inset-y-0 left-0 rounded-full bg-accent transition-all"
+              className="absolute inset-y-0 left-0 rounded-full bg-accent"
               style={{ width: `${(cat.after / maxVal) * 100}%` }}
             />
           </div>
-          <div className="flex justify-between mt-[var(--space-1)] text-[13px] text-muted">
-            <span>Before: {cat.before}</span>
-            <span>After: {cat.after}</span>
+
+          <div className="flex justify-between mt-[var(--space-2)] font-data text-[0.75rem] text-muted/70">
+            <span>{cat.before} / 7</span>
+            <span>{cat.after} / 7</span>
           </div>
         </div>
       ))}
-      <div className="flex items-center gap-[var(--space-4)] text-[13px] text-muted mt-[var(--space-3)]">
+
+      <div className="flex items-center gap-[var(--space-5)] text-[0.75rem] text-muted pt-[var(--space-3)] border-t border-border/40">
         <span className="flex items-center gap-[var(--space-2)]">
-          <span className="inline-block w-3 h-3 rounded-full bg-primary/40" />
+          <span className="inline-block w-[var(--space-4)] h-[4px] rounded-full bg-primary/25" />
           Baseline
         </span>
         <span className="flex items-center gap-[var(--space-2)]">
-          <span className="inline-block w-3 h-3 rounded-full bg-accent" />
-          Follow-up
+          <span className="inline-block w-[var(--space-4)] h-[4px] rounded-full bg-accent" />
+          8 months later
         </span>
-        <span className="ml-auto">Scale: 0–7</span>
       </div>
     </div>
   );
