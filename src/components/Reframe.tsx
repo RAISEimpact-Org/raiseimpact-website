@@ -1,20 +1,14 @@
-import Section from "./Section";
-
 export default function Reframe() {
   return (
-    <Section narrow compact className="border-t border-border/40">
-      <p className="text-[clamp(1.125rem,2vw,1.3125rem)] leading-[1.75] text-text/90">
-        These organizations build compute infrastructure, research
-        infrastructure, and policy infrastructure. They have not built{" "}
-        <strong className="text-primary font-medium">
-          people infrastructure
-        </strong>{" "}
-        — the systems that help teams give feedback, make decisions, manage
-        transitions, and retain the people doing the work.
-      </p>
-      <h2 className="mt-[var(--space-6)]">
-        We build it.
-      </h2>
-    </Section>
+    <section className="py-[var(--space-9)] md:py-[var(--space-10)] px-[var(--space-5)] md:px-[var(--space-7)] bg-dark text-white">
+      <div className="mx-auto max-w-[var(--max-layout)] text-center">
+        <p className="font-heading text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[1.5] font-medium text-white/60 mb-[var(--space-5)]">
+          No bureaucratic HR. No fluff. No generic frameworks.
+        </p>
+        <p className="font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.3] font-semibold text-white">
+          Only high-ROI interventions that catalyze your team&apos;s impact.
+        </p>
+      </div>
+    </section>
   );
 }

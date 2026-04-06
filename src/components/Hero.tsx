@@ -1,30 +1,40 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section className="pt-36 pb-[var(--space-9)] px-[var(--space-5)] md:px-[var(--space-7)]">
+    <section className="pt-40 pb-[var(--space-10)] px-[var(--space-5)] md:px-[var(--space-7)]">
       <div className="mx-auto max-w-[var(--max-layout)]">
-        <div className="max-w-2xl">
-          <h1>
-            $94 million on salaries.
-            <br />
-            <span className="text-accent">
-              $34,000 on developing those people.
-            </span>
-          </h1>
+        <h1 className="max-w-4xl">
+          Turn individual brilliance into <span className="text-accent">collective intelligence</span>.
+        </h1>
 
-          <p className="mt-[var(--space-5)] text-lg text-muted leading-relaxed max-w-lg">
-            People infrastructure for AI safety organizations.
-          </p>
+        <div className="mt-[var(--space-8)] grid md:grid-cols-[1fr_auto] md:items-end gap-[var(--space-7)]">
+          <div>
+            <p className="text-[1.1875rem] text-muted leading-relaxed max-w-md">
+              Fractional people development for AI safety organizations.
+            </p>
+            <div className="mt-[var(--space-4)] flex items-center gap-[var(--space-3)]">
+              <span className="text-[0.8125rem] text-muted/60">Funded by</span>
+              <Image
+                src="/coefficient-giving-logo.png"
+                alt="Coefficient Giving"
+                width={160}
+                height={34}
+                className="rounded-md"
+              />
+            </div>
+          </div>
 
-          <div className="mt-[var(--space-6)] flex flex-wrap gap-[var(--space-4)]">
+          <div className="flex flex-wrap gap-[var(--space-4)]">
             <a
               href="#contact"
-              className="inline-flex items-center px-7 py-3.5 rounded bg-accent text-white font-medium transition-all hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
+              className="inline-flex items-center px-7 py-3.5 rounded-md bg-accent text-white font-medium transition-all hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
             >
-              Let&apos;s talk about your organization
+              Apply
             </a>
             <a
-              href="#approach"
-              className="inline-flex items-center px-7 py-3.5 rounded border border-border text-text transition-all hover:border-primary/40 hover:text-primary"
+              href="#symptoms"
+              className="inline-flex items-center px-7 py-3.5 rounded-md border border-border text-text transition-all hover:border-accent/40 hover:text-accent"
             >
               How we work
               <svg

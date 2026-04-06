@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
+import ConstellationDAG from "@/components/ConstellationDAG";
 import Reframe from "@/components/Reframe";
 import HowWeWork from "@/components/HowWeWork";
 import Evidence from "@/components/Evidence";
@@ -14,7 +14,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Problem />
+        <ConstellationDAG />
         <Reframe />
         <HowWeWork />
         <Evidence />
