@@ -18,9 +18,9 @@ export default function Hero() {
               <Image
                 src="/coefficient-giving-logo.png"
                 alt="Coefficient Giving"
-                width={160}
-                height={34}
-                className="rounded-md"
+                width={80}
+                height={17}
+                className="rounded-sm"
               />
             </div>
           </div>
