@@ -24,7 +24,7 @@ export default function Section({
       : "";
 
   const maxW = narrow ? "max-w-[var(--max-text)]" : "max-w-[var(--max-layout)]";
-  const py = compact ? "py-[var(--space-7)]" : "py-[var(--space-9)]";
+  const py = compact ? "py-[var(--space-8)]" : "py-[var(--space-10)] md:py-[160px]";
 
   return (
     <section

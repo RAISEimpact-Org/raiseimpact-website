@@ -22,7 +22,7 @@ export default function CategoryChart() {
           {/* Before bar */}
           <div className="relative h-[6px] rounded-full bg-border/60 mb-[var(--space-2)]">
             <div
-              className="absolute inset-y-0 left-0 rounded-full bg-primary/25"
+              className="absolute inset-y-0 left-0 rounded-full bg-dark/15"
               style={{ width: `${(cat.before / maxVal) * 100}%` }}
             />
           </div>
@@ -44,7 +44,7 @@ export default function CategoryChart() {
 
       <div className="flex items-center gap-[var(--space-5)] text-[0.75rem] text-muted pt-[var(--space-3)] border-t border-border/40">
         <span className="flex items-center gap-[var(--space-2)]">
-          <span className="inline-block w-[var(--space-4)] h-[4px] rounded-full bg-primary/25" />
+          <span className="inline-block w-[var(--space-4)] h-[4px] rounded-full bg-dark/15" />
           Baseline
         </span>
         <span className="flex items-center gap-[var(--space-2)]">

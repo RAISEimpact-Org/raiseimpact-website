@@ -12,7 +12,7 @@ export default function Evidence() {
         {/* Left: headline metric + narrative */}
         <div>
           <div className="flex items-baseline gap-[var(--space-4)] mb-[var(--space-6)]">
-            <span className="font-data text-[clamp(3rem,8vw,4.5rem)] leading-[1] font-medium text-primary tracking-tight">
+            <span className="font-data text-[clamp(3rem,8vw,4.5rem)] leading-[1] font-medium text-dark tracking-tight">
               4.9
             </span>
             <span className="font-data text-[clamp(1.25rem,3vw,1.75rem)] text-muted/50">

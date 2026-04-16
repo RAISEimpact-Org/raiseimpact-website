@@ -3,18 +3,18 @@
 /* ── Design Tokens ─────────────────────────────────────────────── */
 
 :root {
-  /* Colors — warm, editorial, not corporate */
-  --color-primary: #1b5e7a;
-  --color-primary-light: #24799e;
-  --color-text: #2c3e50;
-  --color-accent: #d4874d;
-  --color-accent-hover: #c17a42;
-  --color-bg: #faf8f5;
-  --color-surface: #f0eeeb;
-  --color-muted: #7a8b8f;
-  --color-border: #ddd9d4;
-  --color-dark: #1a2832;
-  --color-dark-surface: #1f3340;
+  /* Colors — Epoch-inspired teal/mint system */
+  --color-primary: #072B33;
+  --color-primary-light: #034752;
+  --color-text: #212A2A;
+  --color-accent: #00A5A6;
+  --color-accent-hover: #008F90;
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F3;
+  --color-muted: #536565;
+  --color-border: #E3E4E4;
+  --color-dark: #090C0C;
+  --color-dark-surface: #111818;
 
   /* Typography */
   --font-heading: var(--font-source-serif);
@@ -71,7 +71,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body), system-ui, sans-serif;
   font-size: 1.0625rem; /* 17px */
-  line-height: 1.7;
+  line-height: 1.75;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,21 +81,21 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading), Georgia, serif;
-  color: var(--color-primary);
+  color: var(--color-dark);
 }
 
 h1 {
-  font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+  font-size: clamp(2.75rem, 5vw + 1rem, 4rem);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: clamp(1.625rem, 2.5vw + 0.5rem, 2.125rem);
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
   font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 h3 {

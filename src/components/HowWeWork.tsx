@@ -36,7 +36,7 @@ export default function HowWeWork() {
               <span className="font-data text-[0.75rem] text-muted/60 tracking-wider">
                 0{i + 1}
               </span>
-              <h3 className="text-primary mt-1">{stage.title}</h3>
+              <h3 className="text-dark mt-1">{stage.title}</h3>
             </div>
             <p className="text-[1.0625rem] leading-[1.7] max-w-[var(--max-text)] text-text/85">
               {stage.body}
@@ -49,7 +49,7 @@ export default function HowWeWork() {
         <span className="font-data text-[0.875rem] text-muted tracking-wide">
           Leadership time
         </span>
-        <span className="font-data text-[1.125rem] font-medium text-primary">
+        <span className="font-data text-[1.125rem] font-medium text-dark">
           2–3 hrs / week
         </span>
       </div>

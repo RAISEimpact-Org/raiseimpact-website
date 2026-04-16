@@ -44,7 +44,7 @@ export default function Nav() {
       <div className="mx-auto max-w-[var(--max-page)] flex items-center justify-between px-[var(--space-5)] md:px-[var(--space-7)] h-16">
         <Link
           href="/"
-          className="font-heading text-lg font-semibold text-primary tracking-tight"
+          className="font-heading text-lg font-semibold text-dark tracking-tight"
         >
           RAISEimpact
         </Link>
@@ -57,7 +57,7 @@ export default function Nav() {
               href={link.href}
               className={`text-[0.875rem] tracking-wide uppercase transition-colors ${
                 active === link.href.slice(1)
-                  ? "text-primary"
+                  ? "text-dark"
                   : "text-muted hover:text-text"
               }`}
             >
@@ -74,7 +74,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 -mr-2 text-primary"
+          className="md:hidden p-2 -mr-2 text-dark"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -103,7 +103,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-[0.9375rem] text-text hover:text-primary transition-colors"
+              className="block py-3 text-[0.9375rem] text-text hover:text-dark transition-colors"
             >
               {link.label}
             </a>

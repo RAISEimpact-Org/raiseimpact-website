@@ -27,7 +27,7 @@ export default function Problem() {
         />
       </div>
 
-      <div className="max-w-[var(--max-text)] space-y-4 text-[1.0625rem] leading-relaxed border-l-2 border-accent/60 pl-[var(--space-6)] ml-[var(--space-2)]">
+      <div className="max-w-[var(--max-text)] space-y-4 text-[1.0625rem] leading-relaxed border-l-2 border-accent/40 pl-[var(--space-6)] ml-[var(--space-2)]">
         <p className="text-text/80">An ops lead doing three jobs, running out of energy.</p>
         <p className="text-text/80">
           Co-leaders entering a critical conversation without knowing they
