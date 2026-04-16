@@ -13,16 +13,14 @@ const edges = [
   { from: "ed-manages", to: "fire" },
   { from: "one-person", to: "senior-role" },
   { from: "one-person", to: "grew-5x" },
-  { from: "frustrations", to: "best-leave" },
-  { from: "frustrations", to: "health-score" },
+  { from: "frustrations", to: "fundraising" },
   { from: "deadlines", to: "circles" },
   { from: "co-leaders", to: "talent" },
   { from: "fire", to: "talent" },
-  { from: "best-leave", to: "talent" },
   { from: "senior-role", to: "research" },
   { from: "grew-5x", to: "research" },
   { from: "circles", to: "research" },
-  { from: "health-score", to: "mission" },
+  { from: "fundraising", to: "mission" },
   { from: "deadlines", to: "mission" },
   { from: "circles", to: "mission" },
 ];
@@ -40,10 +38,9 @@ const desktopPositions: Record<string, [number, number]> = {
   fire:         [1,  15],
   "co-leaders": [1,  27],
   "senior-role":[26, 22],
-  "best-leave": [52, 16],
+  fundraising:  [52, 22],
   circles:      [76, 24],
   "grew-5x":    [26, 36],
-  "health-score":[52, 34],
   // Structural symptoms (lower zone)
   "ed-manages": [6,  52],
   "one-person": [28, 58],
@@ -61,10 +58,9 @@ const tabletPositions: Record<string, [number, number]> = {
   fire:         [0,  13],
   "co-leaders": [0,  24],
   "senior-role":[30, 18],
-  "best-leave": [56, 13],
-  circles:      [56, 25],
+  fundraising:  [56, 22],
+  circles:      [56, 36],
   "grew-5x":    [30, 30],
-  "health-score":[56, 36],
   "ed-manages": [2,  44],
   "one-person": [30, 48],
   frustrations: [56, 44],
@@ -187,10 +183,9 @@ export default function ConstellationDAG() {
     fire: <>Need to <B>let someone go</B>. Nobody here has done this before.</>,
     "senior-role": <>Can&apos;t fill a <B>senior role</B>. Not sure why.</>,
     "grew-5x": <>Grew <B>5x</B>. Org still runs like it did at five people.</>,
-    "best-leave": <><B>Best people leaving</B>. Nobody addressed what they raised.</>,
-    "health-score": <><B>Team health score</B> would embarrass if the board saw it.</>,
+    fundraising: <><B>Fundraising</B>{" "}stalls. Not sure what&apos;s blocking it.</>,
     circles: <>Moving fast. <B>In circles.</B></>,
-    "ed-manages": <>ED <B>managing people</B>{" "}they don&apos;t want to manage.</>,
+    "ed-manages": <>Executive Director <B>managing people</B>{" "}they don&apos;t want to manage.</>,
     "one-person": <>One person <B>holding everything together</B>. Running out of energy.</>,
     frustrations: <><B>Frustrations</B> accumulate silently until they erupt.</>,
     deadlines: <><B>Deadlines slip</B>. Nobody follows up.</>,
@@ -208,11 +203,11 @@ export default function ConstellationDAG() {
       className="bg-surface py-[var(--space-10)] md:py-[140px] px-[var(--space-5)] md:px-[var(--space-7)]"
     >
       <div className="mx-auto max-w-[1200px]">
-        <p className="text-[0.8125rem] uppercase tracking-[0.15em] text-muted mb-[var(--space-5)]">
+        <h2 className="font-heading font-semibold text-dark mb-[var(--space-5)]">
           The challenge
-        </p>
+        </h2>
         <p className="text-lg leading-relaxed mb-[var(--space-9)] max-w-[var(--max-text)]">
-          These aren&apos;t twelve separate problems. They&apos;re one system.
+          Suboptimal results. Many symptoms. One root cause.
         </p>
 
         <div ref={containerRef} className="relative">
@@ -375,8 +370,8 @@ export default function ConstellationDAG() {
               <div data-node="senior-role" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm -mt-1">
                 Can&apos;t fill a <B>senior role</B>. Not sure why.
               </div>
-              <div data-node="best-leave" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm mt-2">
-                <B>Best people leaving</B>. Nobody addressed what they raised.
+              <div data-node="fundraising" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm mt-2">
+                <B>Fundraising</B> stalls. Not sure what&apos;s blocking it.
               </div>
               <div data-node="grew-5x" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm mt-1">
                 Grew <B>5x</B>. Org still runs like it did at five people.
@@ -384,13 +379,10 @@ export default function ConstellationDAG() {
               <div data-node="circles" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm -mt-2">
                 Moving fast. <B>In circles.</B>
               </div>
-              <div data-node="health-score" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm col-span-2 max-w-[200px] justify-self-center mt-1">
-                <B>Team health score</B> would embarrass if the board saw it.
-              </div>
 
               {/* Structural symptoms */}
               <div data-node="ed-manages" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm mt-4">
-                ED <B>managing people</B>{" "}they don&apos;t want to manage.
+                Executive Director <B>managing people</B> they don&apos;t want to manage.
               </div>
               <div data-node="one-person" className="bg-white border border-border rounded-xl px-3 py-3 text-[0.8125rem] leading-[1.45] text-text/80 shadow-sm mt-7">
                 One person <B>holding everything together</B>. Running out of energy.

@@ -22,9 +22,9 @@ const stages = [
 export default function HowWeWork() {
   return (
     <Section id="approach" surface>
-      <p className="text-[0.8125rem] uppercase tracking-[0.15em] text-muted mb-[var(--space-8)]">
+      <h2 className="font-heading font-semibold text-dark mb-[var(--space-8)]">
         How we work
-      </p>
+      </h2>
 
       <div className="grid gap-[var(--space-7)]">
         {stages.map((stage, i) => (

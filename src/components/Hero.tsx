@@ -5,24 +5,23 @@ export default function Hero() {
     <section className="pt-40 pb-[var(--space-10)] px-[var(--space-5)] md:px-[var(--space-7)]">
       <div className="mx-auto max-w-[var(--max-layout)]">
         <h1 className="max-w-4xl">
-          Turn individual brilliance into <span className="text-accent">collective intelligence</span>.
+          Turn individual brilliance into <span className="text-accent">collective intelligence</span>
         </h1>
 
-        <div className="mt-[var(--space-8)] grid md:grid-cols-[1fr_auto] md:items-end gap-[var(--space-7)]">
-          <div>
-            <p className="text-[1.1875rem] text-muted leading-relaxed max-w-md">
-              Fractional people development for AI safety organizations.
-            </p>
-            <div className="mt-[var(--space-4)] flex items-center gap-[var(--space-3)]">
-              <span className="text-[0.8125rem] text-muted/60">Funded by</span>
-              <Image
-                src="/coefficient-giving-logo.png"
-                alt="Coefficient Giving"
-                width={80}
-                height={17}
-                className="rounded-sm"
-              />
-            </div>
+        <p className="mt-[var(--space-6)] text-[clamp(1.1rem,1.75vw+0.35rem,1.7rem)] text-muted leading-[1.3]">
+          Fractional people development for AI safety organizations
+        </p>
+
+        <div className="mt-[var(--space-7)] grid md:grid-cols-[1fr_auto] md:items-end gap-[var(--space-6)]">
+          <div className="flex items-center gap-[var(--space-4)]">
+            <span className="text-[1.625rem] text-muted/60">Funded by</span>
+            <Image
+              src="/coefficient-giving-logo.png"
+              alt="Coefficient Giving"
+              width={120}
+              height={26}
+              className="rounded-sm"
+            />
           </div>
 
           <div className="flex flex-wrap gap-[var(--space-4)]">
@@ -30,7 +29,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center px-7 py-3.5 rounded-md bg-accent text-white font-medium transition-all hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
             >
-              Apply
+              Book a 30 min call
             </a>
             <a
               href="#symptoms"
